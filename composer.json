@@ -50,7 +50,7 @@
         "ext-intl": "*",
         "doctrine/annotations": "*",
         "symfony/serializer": "*",
-        "symfony/property-info": "v",
+        "symfony/property-info": "*",
         "symfony/property-access": "*",
         "sabre/vobject": "*",
         "phpdocumentor/reflection-docblock": "*",
