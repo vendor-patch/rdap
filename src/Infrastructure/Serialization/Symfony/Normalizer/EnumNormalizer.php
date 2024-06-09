@@ -29,7 +29,7 @@ final class EnumNormalizer implements NormalizerInterface, CacheableSupportsMeth
     }
 
     /** {@inheritdoc} */
-    public function supportsDenormalization(mixed $data, string $type, ?string $format = null, array $context = []): bool
+    public function supportsNormalization(mixed $data, string $type, ?string $format = null, array $context = []): bool
     {
         return $data instanceof Enum;
     }
