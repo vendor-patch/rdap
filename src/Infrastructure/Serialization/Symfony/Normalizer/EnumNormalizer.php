@@ -29,13 +29,13 @@ final class EnumNormalizer implements NormalizerInterface, CacheableSupportsMeth
     }
 
     /** {@inheritdoc} */
-    public function supportsNormalization($data, $format = null)
+    public function supportsDenormalization(mixed $data, string $type, ?string $format = null, array $context = []): bool
     {
         return $data instanceof Enum;
     }
 
     /** {@inheritdoc} */
-    public function normalize($object, $format = null, array $context = [])
+    public function normalize(mixed $object, ?string $format = null, array $context = []): ArrayObject|array|string|int|float|bool|null
     {
         /** @var Enum $object */
         return $object->getValue() ?? $object->getName();
