@@ -29,6 +29,11 @@ final class VcardNormalizer implements NormalizerInterface, CacheableSupportsMet
         return true;
     }
 
+
+    public function getSupportedTypes(?string $format): array {
+      return ['*']; 
+    }
+    
     /** {@inheritdoc} */
     public function supportsNormalization(mixed $data, string $type, ?string $format = null, array $context = []): bool
     {
