@@ -36,6 +36,11 @@ final class DomainNormalizer implements DenormalizerInterface, CacheableSupports
         return true;
     }
 
+    public function getSupportedTypes(?string $format): array {
+      return ['*'];
+    }
+
+    
     /**
      * @psalm-suppress MixedInferredReturnType
      * @psalm-suppress MixedArrayAccess
