@@ -48,7 +48,7 @@ final class DomainNormalizer implements DenormalizerInterface, CacheableSupports
         return $data;
     }
 
-    public function supportsDenormalization(mixed $data, string $type, ?string $format = null)
+    public function supportsDenormalization(mixed $data, string $type, ?string $format = null, array $context = []): bool
     {
         return $type === Domain::class;
     }
