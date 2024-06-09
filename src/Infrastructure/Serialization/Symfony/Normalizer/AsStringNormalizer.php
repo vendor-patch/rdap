@@ -28,13 +28,13 @@ final class AsStringNormalizer implements NormalizerInterface, CacheableSupports
     }
 
     /** {@inheritdoc} */
-    public function supportsNormalization($data, $format = null)
+    public function supportsNormalization(mixed $data, string $type, ?string $format = null, array $context = []): bool
     {
         return is_object($data) && method_exists($data, '__toString');
     }
 
     /** {@inheritdoc} */
-    public function normalize($object, $format = null, array $context = [])
+    public function normalize(mixed $object, ?string $format = null, array $context = []): ArrayObject|array|string|int|float|bool|null
     {
         return (string) $object;
     }
