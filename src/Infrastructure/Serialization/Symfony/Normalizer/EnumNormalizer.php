@@ -28,6 +28,9 @@ final class EnumNormalizer implements NormalizerInterface, CacheableSupportsMeth
         return true;
     }
 
+    public function getSupportedTypes(?string $format): array {
+      return ['*']; 
+    }
     /** {@inheritdoc} */
     public function supportsNormalization(mixed $data, ?string $format = null, array $context = []): bool
     {
