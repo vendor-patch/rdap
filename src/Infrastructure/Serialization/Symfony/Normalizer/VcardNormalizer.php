@@ -31,17 +31,17 @@ final class VcardNormalizer implements NormalizerInterface, CacheableSupportsMet
 
 
     public function getSupportedTypes(?string $format): array {
-      return ['*', ArrayObject|array]; 
+      return ['*']; 
     }
     
     /** {@inheritdoc} */
-    public function supportsNormalization(mixed $data, string $type, ?string $format = null, array $context = []): bool
+    public function supportsNormalization(mixed $data, ?string $format = null, array $context = []): bool
     {
         return $data instanceof VCard;
     }
 
     /** {@inheritdoc} */
-    public function normalize(mixed $object, ?string $format = null, array $context = []): ArrayObject|array|string|int|float|bool|null
+    public function normalize(mixed $object, ?string $format = null, array $context = []): \ArrayObject|array|string|int|float|bool|null
     {
         /** @var VCard $object */
         $vCardString = $object->buildVCard();
