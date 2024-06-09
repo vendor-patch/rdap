@@ -38,7 +38,7 @@ final class EnumNormalizer implements NormalizerInterface, CacheableSupportsMeth
     }
 
     /** {@inheritdoc} */
-    public function normalize(mixed $object, ?string $format = null, array $context = []): ArrayObject|array|string|int|float|bool|null
+    public function normalize(mixed $object, ?string $format = null, array $context = []): \ArrayObject|array|string|int|float|bool|null
     {
         /** @var Enum $object */
         return $object->getValue() ?? $object->getName();
