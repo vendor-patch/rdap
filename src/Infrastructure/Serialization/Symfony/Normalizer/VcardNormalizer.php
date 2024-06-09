@@ -31,7 +31,7 @@ final class VcardNormalizer implements NormalizerInterface, CacheableSupportsMet
 
 
     public function getSupportedTypes(?string $format): array {
-      return ['*']; 
+      return ['*', ArrayObject|array]; 
     }
     
     /** {@inheritdoc} */
